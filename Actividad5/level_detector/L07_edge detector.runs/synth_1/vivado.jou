@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Mon Sep 29 09:52:59 2025
+# Process ID         : 6296
+# Current directory  : C:/repo/systemverilog/L07_edge detector/L07_edge detector.runs/synth_1
+# Command line       : vivado.exe -log edge_detect_mealy.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source edge_detect_mealy.tcl
+# Log file           : C:/repo/systemverilog/L07_edge detector/L07_edge detector.runs/synth_1/edge_detect_mealy.vds
+# Journal file       : C:/repo/systemverilog/L07_edge detector/L07_edge detector.runs/synth_1\vivado.jou
+# Running On         : jlbpacheco
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 7 5800HS with Radeon Graphics         
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 42311 MB
+# Swap memory        : 2684 MB
+# Total Virtual      : 44995 MB
+# Available Virtual  : 27939 MB
+#-----------------------------------------------------------
+source edge_detect_mealy.tcl -notrace
