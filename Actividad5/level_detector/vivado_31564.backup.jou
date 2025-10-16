@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Sep 16 19:07:45 2025
+# Process ID         : 31564
+# Current directory  : C:/repo/systemverilog/L07_edge detector
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent25868 C:\repo\systemverilog\L07_edge detector\L07_edge detector.xpr
+# Log file           : C:/repo/systemverilog/L07_edge detector/vivado.log
+# Journal file       : C:/repo/systemverilog/L07_edge detector\vivado.jou
+# Running On         : jlbpacheco
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 7 5800HS with Radeon Graphics         
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 42311 MB
+# Swap memory        : 2684 MB
+# Total Virtual      : 44995 MB
+# Available Virtual  : 31050 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/repo/systemverilog/L07_edge detector/L07_edge detector.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source edge_detect_moore_tb.tcl
+close_sim
