@@ -28,7 +28,9 @@ module seg
 always_comb
     case(state_reg[N-1:N-2])
     2'b00:salida_mux<=gdc[3:0];
-    2'b10:salida_mux<=gdc[7:4];
+    2'b01:salida_mux<=gdc[7:4];
+    2'b01:salida_mux<=4'b0000;
+    2'b01:salida_mux<=4'b0000;
     endcase
  
 //Hexadecimal a display
