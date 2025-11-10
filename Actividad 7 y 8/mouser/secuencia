@@ -1,0 +1,78 @@
+`timescale 1ns / 1ps
+
+module count(
+    input  logic clk,
+    input  logic reset,
+    input  logic go,
+    input  logic [3:0] n,
+    output logic [7:0] out
+);
+
+    typedef enum logic [2:0] {s0, s1, s2, s3, s4} state_type;
+    state_type state_reg, state_next;  
+    
+    logic [3:0] n2;
+    logic [7:0] outs;
+    logic [16:0] cuatros;
+    logic [16:0] unos;
+
+
+    always_ff @(posedge clk, posedge reset) begin
+        if(reset) begin
+            state_reg <= s0;
+            n2<= 0;
+            cuatros<= 0;
+            unos<= 0;
+            outs<= 0;
+        end else begin
+            state_reg <= state_next;
+            case(state_reg)
+                s0: begin
+                    if(go) begin
+                        n2<= n;
+                        cuatros<= 0;
+                        unos<= 0;
+                    end
+                end
+                s2: begin
+                    n2<= n2/2;  
+                    cuatros<= cuatros + 1;
+                end
+                s3: begin
+                    n2 <= n2/2;
+                    cuatros <= cuatros + 1;
+                    unos    <= unos + 1;
+                end
+                s4: begin
+                    if(n==1)
+                    outs<=8'd1;
+                    else
+                    outs <= (4*cuatros*n2) + unos;
+                end
+            endcase
+        end
+    end
+
+    always_comb 
+        case(state_reg)
+            s0: 
+            if(go) 
+            state_next <= s1;
+            else
+            state_next <= s0;
+            s1: begin
+                if(n2 == 0 || n2 == 1) state_next <= s4;
+                else if(n2[0] == 1)    state_next <= s3; // impar
+                else                    state_next <= s2; // par
+            end
+
+            s2: state_next <= s1;
+            s3: state_next <= s1;
+            s4: state_next <= s0;
+        endcase
+
+
+    assign out = outs;
+
+endmodule
+
